@@ -13,12 +13,11 @@ export const size = {
 export const contentType = "image/png"
 
 // Image generation
-export default async function Image() {
+export default function Image() {
   return new ImageResponse(
     // ImageResponse JSX element
     <div
       style={{
-        fontSize: 128,
         background: "linear-gradient(to bottom, #d4b98c, #c0a678)",
         width: "100%",
         height: "100%",
@@ -29,7 +28,7 @@ export default async function Image() {
         color: "white",
         padding: "40px",
         textAlign: "center",
-        fontFamily: "serif", // Use system serif font instead of loading Google Fonts
+        fontFamily: "serif",
       }}
     >
       <div style={{ fontSize: "72px", marginBottom: "20px", fontWeight: "bold" }}>Graceful Harpist</div>
@@ -37,9 +36,9 @@ export default async function Image() {
         Professional Harp Music for Weddings and Events in Austin, Texas
       </div>
     </div>,
-    // ImageResponse options
     {
-      ...size,
+      width: 1200,
+      height: 630,
     },
   )
 }
