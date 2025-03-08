@@ -1,0 +1,531 @@
+/* Graceful Harpist - Dubsado Form Custom Styling */
+
+/* Base Form Styling */
+.dubsado-form {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  max-width: 100%;
+}
+
+/* Dark Mode Support */
+.dark .dubsado-form {
+  color: #f5f5f5;
+}
+
+/* Typography */
+.dubsado-form h1,
+.dubsado-form h2,
+.dubsado-form h3,
+.dubsado-form h4,
+.dubsado-form .form-title,
+.dubsado-form .section-title {
+  font-family: "Cormorant Garamond", serif;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.dark .dubsado-form h1,
+.dark .dubsado-form h2,
+.dark .dubsado-form h3,
+.dark .dubsado-form h4,
+.dark .dubsado-form .form-title,
+.dark .dubsado-form .section-title {
+  color: #f5f5f5;
+}
+
+/* Hide Dubsado's default title if needed */
+.dubsado-form .dubsado-default-title {
+  display: none;
+}
+
+/* Form Fields */
+.dubsado-form input[type="text"],
+.dubsado-form input[type="email"],
+.dubsado-form input[type="tel"],
+.dubsado-form input[type="date"],
+.dubsado-form input[type="time"],
+.dubsado-form select,
+.dubsado-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dark .dubsado-form input[type="text"],
+.dark .dubsado-form input[type="email"],
+.dark .dubsado-form input[type="tel"],
+.dark .dubsado-form input[type="date"],
+.dark .dubsado-form input[type="time"],
+.dark .dubsado-form select,
+.dark .dubsado-form textarea {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #f5f5f5;
+}
+
+.dubsado-form input:focus,
+.dubsado-form select:focus,
+.dubsado-form textarea:focus {
+  outline: none;
+  border-color: #d4b98c;
+  box-shadow: 0 0 0 3px rgba(212, 185, 140, 0.2);
+}
+
+/* Labels - Updated to ensure proper font and required star positioning */
+.dubsado-form label,
+.dubsado-form .field-label,
+.dubsado-form .form-field-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #4a5568;
+  font-family: "Lato", sans-serif;
+  position: relative;
+}
+
+.dark .dubsado-form label,
+.dark .dubsado-form .field-label,
+.dark .dubsado-form .form-field-label {
+  color: #e2e8f0;
+}
+
+/* Required Field Indicator - Fixed positioning */
+.dubsado-form .required-field::after,
+.dubsado-form label.required::after,
+.dubsado-form .field-label.required::after,
+.dubsado-form .form-field-label.required::after,
+.dubsado-form [required]::after {
+  content: "*";
+  color: #d4b98c;
+  margin-left: 0.25rem;
+  display: inline;
+  vertical-align: top;
+}
+
+/* Remove any existing required indicators that might be positioned incorrectly */
+.dubsado-form .required-indicator {
+  display: inline;
+  vertical-align: top;
+  position: static;
+  margin-left: 0.25rem;
+  color: #d4b98c;
+}
+
+/* Buttons */
+.dubsado-form button,
+.dubsado-form .button,
+.dubsado-form input[type="submit"] {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #d4b98c;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.dubsado-form button:hover,
+.dubsado-form .button:hover,
+.dubsado-form input[type="submit"]:hover {
+  background-color: #c0a678;
+}
+
+.dubsado-form button:focus,
+.dubsado-form .button:focus,
+.dubsado-form input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 185, 140, 0.4);
+}
+
+/* Secondary Buttons */
+.dubsado-form button.secondary,
+.dubsado-form .button.secondary {
+  background-color: transparent;
+  border: 1px solid #d4b98c;
+  color: #d4b98c;
+}
+
+.dubsado-form button.secondary:hover,
+.dubsado-form .button.secondary:hover {
+  background-color: rgba(212, 185, 140, 0.1);
+}
+
+/* Checkboxes and Radio Buttons */
+.dubsado-form input[type="checkbox"],
+.dubsado-form input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: #d4b98c;
+}
+
+.dubsado-form .checkbox-label,
+.dubsado-form .radio-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Sections */
+.dubsado-form .form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dark .dubsado-form .form-section {
+  border-bottom-color: #4a5568;
+}
+
+.dubsado-form .form-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Error Messages */
+.dubsado-form .error-message {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.dubsado-form input.error,
+.dubsado-form select.error,
+.dubsado-form textarea.error {
+  border-color: #e53e3e;
+}
+
+/* Success Messages */
+.dubsado-form .success-message {
+  padding: 1rem;
+  background-color: rgba(212, 185, 140, 0.1);
+  border-left: 4px solid #d4b98c;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.dark .dubsado-form .success-message {
+  background-color: rgba(212, 185, 140, 0.2);
+  color: #f5f5f5;
+}
+
+/* Date Picker Styling */
+.dubsado-form .date-picker {
+  position: relative;
+}
+
+.dubsado-form .date-picker-calendar {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.dark .dubsado-form .date-picker-calendar {
+  background-color: #2d3748;
+  border-color: #4a5568;
+}
+
+.dubsado-form .date-picker-day.selected {
+  background-color: #d4b98c;
+  color: white;
+}
+
+/* Dropdown Styling - Fixed to prevent text being covered */
+.dubsado-form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23718096' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  appearance: none;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  height: auto;
+  line-height: 1.5;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.dark .dubsado-form select {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #f5f5f5;
+}
+
+/* Fix for dropdown options */
+.dubsado-form select option {
+  padding: 0.5rem;
+  background-color: #fff;
+  color: #333;
+  font-family: "Lato", sans-serif;
+}
+
+.dark .dubsado-form select option {
+  background-color: #2d3748;
+  color: #f5f5f5;
+}
+
+/* Form Grid Layout */
+.dubsado-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.dubsado-form .form-col {
+  flex: 1 0 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .dubsado-form .form-col-half {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Progress Bar (if applicable) */
+.dubsado-form .progress-bar {
+  height: 0.5rem;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.dubsado-form .progress-bar-fill {
+  height: 100%;
+  background-color: #d4b98c;
+  transition: width 0.3s ease;
+}
+
+.dark .dubsado-form .progress-bar {
+  background-color: #4a5568;
+}
+
+/* File Upload Styling */
+.dubsado-form .file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border: 2px dashed #e2e8f0;
+  border-radius: 0.5rem;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.dark .dubsado-form .file-upload {
+  border-color: #4a5568;
+  background-color: #2d3748;
+}
+
+.dubsado-form .file-upload:hover {
+  border-color: #d4b98c;
+  background-color: rgba(212, 185, 140, 0.05);
+}
+
+.dubsado-form .file-upload-text {
+  margin-top: 1rem;
+  color: #718096;
+}
+
+.dark .dubsado-form .file-upload-text {
+  color: #a0aec0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .dubsado-form button,
+  .dubsado-form .button,
+  .dubsado-form input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* Remove any Dubsado branding if needed */
+.dubsado-form .dubsado-branding {
+  display: none;
+}
+
+/* Ensure form container has proper spacing */
+#dubsado-form-container {
+  margin: 0 auto;
+}
+
+/* Ensure iframe has proper sizing if Dubsado uses iframes */
+.dubsado-form iframe {
+  width: 100%;
+  border: none;
+  min-height: 600px; /* Adjust based on your form's height */
+}
+
+/* Additional fixes for Dubsado specific elements */
+.dubsado-form .field-wrapper,
+.dubsado-form .form-field-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+/* Fix for any parameter name font issues */
+.dubsado-form .field-name,
+.dubsado-form .form-field-name,
+.dubsado-form .parameter-name,
+.dubsado-form .field-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.dark .dubsado-form .field-name,
+.dark .dubsado-form .form-field-name,
+.dark .dubsado-form .parameter-name,
+.dark .dubsado-form .field-title {
+  color: #e2e8f0;
+}
+
+/* Match the background color of the Dubsado form to our site */
+body.dubsado-form,
+.dubsado-form .form-container,
+.dubsado-form .form-section,
+.dubsado-form .form-page {
+  background-color: #f9fafb !important; /* Light mode background (gray-50) */
+}
+
+/* For dark mode, we'll add a class via JavaScript */
+body.dark-mode.dubsado-form,
+.dark-mode .dubsado-form .form-container,
+.dark-mode .dubsado-form .form-section,
+.dark-mode .dubsado-form .form-page {
+  background-color: #1f2937 !important; /* Dark mode background (gray-800) */
+}
+
+/* Remove any padding that might cause scrollbars */
+body.dubsado-form {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+/* Make sure form elements have proper spacing */
+.dubsado-form .form-section {
+  padding: 20px !important;
+}
+
+/* Additional Dubsado-specific selectors based on documentation */
+/* Main form background */
+.dubsado-form #form-container,
+.dubsado-form .form-container,
+.dubsado-form .form-wrapper,
+.dubsado-form .form-body,
+.dubsado-form .form-content,
+.dubsado-form .form-page,
+.dubsado-form .form-page-container,
+.dubsado-form .form-page-content {
+  background-color: #f9fafb !important;
+}
+
+.dark-mode .dubsado-form #form-container,
+.dark-mode .dubsado-form .form-container,
+.dark-mode .dubsado-form .form-wrapper,
+.dark-mode .dubsado-form .form-body,
+.dark-mode .dubsado-form .form-content,
+.dark-mode .dubsado-form .form-page,
+.dark-mode .dubsado-form .form-page-container,
+.dark-mode .dubsado-form .form-page-content {
+  background-color: #1f2937 !important;
+}
+
+/* Form header */
+.dubsado-form .form-header,
+.dubsado-form .form-header-container {
+  background-color: #f9fafb !important;
+}
+
+.dark-mode .dubsado-form .form-header,
+.dark-mode .dubsado-form .form-header-container {
+  background-color: #1f2937 !important;
+}
+
+/* Form sections */
+.dubsado-form .form-section,
+.dubsado-form .form-section-container,
+.dubsado-form .form-section-content {
+  background-color: #f9fafb !important;
+}
+
+.dark-mode .dubsado-form .form-section,
+.dark-mode .dubsado-form .form-section-container,
+.dark-mode .dubsado-form .form-section-content {
+  background-color: #1f2937 !important;
+}
+
+/* Form fields container */
+.dubsado-form .form-fields,
+.dubsado-form .form-fields-container {
+  background-color: #f9fafb !important;
+}
+
+.dark-mode .dubsado-form .form-fields,
+.dark-mode .dubsado-form .form-fields-container {
+  background-color: #1f2937 !important;
+}
+
+/* Individual field containers */
+.dubsado-form .form-field,
+.dubsado-form .form-field-container {
+  background-color: transparent !important;
+}
+
+/* Form footer */
+.dubsado-form .form-footer,
+.dubsado-form .form-footer-container {
+  background-color: #f9fafb !important;
+}
+
+.dark-mode .dubsado-form .form-footer,
+.dark-mode .dubsado-form .form-footer-container {
+  background-color: #1f2937 !important;
+}
+
+/* Ensure text is visible in dark mode */
+.dark-mode .dubsado-form .form-field-label,
+.dark-mode .dubsado-form .form-field-description,
+.dark-mode .dubsado-form .form-field-help-text,
+.dark-mode .dubsado-form .form-section-title,
+.dark-mode .dubsado-form .form-section-description {
+  color: #f5f5f5 !important;
+}
+
+/* Fix any background issues with specific Dubsado elements */
+.dubsado-form .form-element,
+.dubsado-form .form-element-container,
+.dubsado-form .form-element-content,
+.dubsado-form .form-element-label,
+.dubsado-form .form-element-input {
+  background-color: transparent !important;
+}
+

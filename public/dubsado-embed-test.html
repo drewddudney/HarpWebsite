@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dubsado Form Test</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .theme-toggle {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .theme-button {
+      padding: 8px 16px;
+      margin: 0 5px;
+      background: #d4b98c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Theme colors */
+    .light-theme {
+      background-color: #f9fafb;
+      color: #333;
+    }
+    
+    .dark-theme {
+      background-color: #1f2937;
+      color: white;
+    }
+    
+    /* Form container */
+    .form-container {
+      padding: 20px;
+      border-radius: 8px;
+    }
+    
+    .light-theme .form-container {
+      background-color: #f9fafb;
+    }
+    
+    .dark-theme .form-container {
+      background-color: #1f2937;
+    }
+  </style>
+</head>
+<body class="light-theme">
+  <div class="container">
+    <h1>Dubsado Form Test</h1>
+    
+    <div class="theme-toggle">
+      <button class="theme-button" onclick="document.body.className='light-theme'">Light Theme</button>
+      <button class="theme-button" onclick="document.body.className='dark-theme'">Dark Theme</button>
+    </div>
+    
+    <div class="form-container">
+      <!-- Original Dubsado Embed Code -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.min.js"></script>
+      <iframe src="https://hello.dubsado.com/public/form/view/62df59991edbd76373b7ac66" frameborder="0" style="width:1px; min-width:100%;"></iframe>
+      <script type="text/javascript">
+        setTimeout(function(){
+          iFrameResize({
+            checkOrigin: false, 
+            heightCalculationMethod: "taggedElement"
+          });
+        }, 300);
+      </script>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,683 @@
+/* Dubsado Dark Mode CSS - Upload this to Dubsado's custom CSS field */
+
+/* Main background colors */
+body,
+#form-container,
+.form-container,
+.form-wrapper,
+.form-body,
+.form-content,
+.form-page,
+.form-page-container,
+.form-page-content,
+.form-section,
+.form-section-container,
+.form-section-content,
+.form-fields,
+.form-fields-container,
+.form-footer,
+.form-footer-container,
+.form-header,
+.form-header-container {
+  background-color: #1f2937 !important; /* Matches dark:bg-gray-800 */
+  color: #ffffff !important;
+}
+
+/* Text colors for labels and titles - with transparent backgrounds */
+.form-title,
+.form-subtitle,
+.form-description,
+.form-field-label,
+.form-field-description,
+.form-field-help-text,
+.form-section-title,
+.form-section-description,
+.form-field-name,
+.form-field-title,
+.form-field-text,
+label,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text,
+.title,
+.subtitle,
+.description,
+.parameter-title,
+.parameter-label,
+.parameter-name,
+.field-title,
+.field-label,
+.field-name,
+.input-label,
+.input-title,
+.input-name,
+.form-label,
+.form-title,
+.form-name,
+.label-text,
+.title-text,
+.name-text,
+[for],
+[aria-label],
+.section-header,
+.section-title,
+.section-heading,
+.form-section-header,
+.form-section-title,
+.form-section-heading,
+.header-text,
+.header-title,
+.header-heading,
+.section-text,
+.section-label,
+.group-header,
+.group-title,
+.group-heading,
+.group-label,
+.group-text,
+.category-header,
+.category-title,
+.category-heading,
+.category-label,
+.category-text,
+div[data-section-title],
+div[data-section-header],
+div[data-group-title],
+div[data-group-header],
+div[data-category-title],
+div[data-category-header],
+[class*="section-title"],
+[class*="section-header"],
+[class*="group-title"],
+[class*="group-header"],
+[class*="category-title"],
+[class*="category-header"],
+[id*="section-title"],
+[id*="section-header"],
+[id*="group-title"],
+[id*="group-header"],
+[id*="category-title"],
+[id*="category-header"] {
+  color: #ffffff !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Specifically target section headers like "Contact Information" and "Event Details" */
+.form-section h1,
+.form-section h2,
+.form-section h3,
+.form-section h4,
+.form-section h5,
+.form-section h6,
+.form-section .title,
+.form-section .header,
+.form-section .heading,
+.form-section .section-title,
+.form-section .section-header,
+.form-section .section-heading,
+.form-section-title,
+.form-section-header,
+.form-section-heading,
+.section-title,
+.section-header,
+.section-heading,
+div[data-type="section-title"],
+div[data-type="section-header"],
+div[data-type="section-heading"],
+[class*="contact-information"],
+[class*="contact_information"],
+[class*="contactinformation"],
+[class*="event-details"],
+[class*="event_details"],
+[class*="eventdetails"],
+[id*="contact-information"],
+[id*="contact_information"],
+[id*="contactinformation"],
+[id*="event-details"],
+[id*="event_details"],
+[id*="eventdetails"],
+.form-section > div > h1,
+.form-section > div > h2,
+.form-section > div > h3,
+.form-section > div > h4,
+.form-section > div > div > h1,
+.form-section > div > div > h2,
+.form-section > div > div > h3,
+.form-section > div > div > h4,
+.form-section > h1,
+.form-section > h2,
+.form-section > h3,
+.form-section > h4 {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+/* Required field indicators - ensure they have transparent backgrounds */
+.required:after,
+.required-field:after,
+[required]:after,
+.required::after,
+.required-field::after,
+[required]::after,
+span.required,
+span.required-field,
+span.required-indicator,
+.required-indicator,
+.required-star,
+.required-asterisk,
+.asterisk,
+.star,
+[class*="required"],
+[class*="asterisk"],
+[class*="star"],
+[id*="required"],
+[id*="asterisk"],
+[id*="star"] {
+  color: #d4b98c !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Form input elements - with transparent backgrounds instead of dark */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+input[type="password"],
+textarea,
+select,
+.form-control,
+.input,
+.text-input,
+.email-input,
+.tel-input,
+.date-input,
+.time-input,
+.number-input,
+.password-input,
+.textarea,
+.select,
+.dropdown,
+[type="text"],
+[type="email"],
+[type="tel"],
+[type="date"],
+[type="time"],
+[type="number"],
+[type="password"],
+[role="textbox"],
+[role="combobox"] {
+  background-color: transparent !important; /* Changed from #374151 to transparent */
+  background: transparent !important; /* Changed from #374151 to transparent */
+  color: #ffffff !important;
+  border-color: #4b5563 !important; /* gray-600 */
+}
+
+/* Placeholder text */
+::placeholder {
+  color: #9ca3af !important; /* gray-400 */
+}
+
+/* Focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #d4b98c !important;
+  box-shadow: 0 0 0 2px rgba(212, 185, 140, 0.3) !important;
+}
+
+/* Buttons */
+button,
+.button,
+input[type="submit"],
+.submit-button,
+[type="submit"],
+[role="button"] {
+  background-color: #d4b98c !important;
+  background: #d4b98c !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover,
+.submit-button:hover,
+[type="submit"]:hover,
+[role="button"]:hover {
+  background-color: #c0a678 !important;
+  background: #c0a678 !important;
+}
+
+/* Checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"],
+[type="checkbox"],
+[type="radio"] {
+  accent-color: #d4b98c !important;
+}
+
+/* Dropdown options */
+select option,
+option {
+  background-color: transparent !important; /* Changed from #374151 to transparent */
+  background: transparent !important; /* Changed from #374151 to transparent */
+  color: #ffffff !important;
+}
+
+/* Error messages */
+.error-message,
+.form-error,
+.field-error,
+[role="alert"] {
+  color: #f87171 !important; /* red-400 */
+}
+
+/* Success messages */
+.success-message,
+.form-success {
+  background-color: rgba(212, 185, 140, 0.2) !important;
+  background: rgba(212, 185, 140, 0.2) !important;
+  color: #ffffff !important;
+  border-color: #d4b98c !important;
+}
+
+/* Remove any borders that might look odd */
+.form-section {
+  border-color: #4b5563 !important; /* gray-600 */
+}
+
+/* Fix any Dubsado branding */
+.dubsado-branding,
+.powered-by {
+  display: none !important;
+}
+
+/* Additional Dubsado-specific elements - keep backgrounds transparent for containers */
+.form-element,
+.form-element-container,
+.form-element-content,
+.form-element-label,
+.form-field,
+.form-field-container,
+.form-field-content,
+.form-field-label,
+.field-wrapper,
+.field-container,
+.input-wrapper,
+.input-container,
+.parameter-wrapper,
+.parameter-container,
+.form-group,
+.form-row,
+.form-col,
+.form-field-wrapper,
+.form-field-container,
+.form-field-row,
+.form-field-col,
+.form-field-group,
+.form-control-wrapper,
+.form-control-container,
+.form-control-row,
+.form-control-col,
+.form-control-group {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Only target the actual input elements with dark backgrounds */
+.form-element-input,
+.form-field-input {
+  background-color: transparent !important; /* Changed from #374151 to transparent */
+  background: transparent !important; /* Changed from #374151 to transparent */
+  color: #ffffff !important;
+}
+
+/* Date picker styling */
+.date-picker-calendar,
+.calendar,
+.calendar-container,
+.date-picker-popup,
+.time-picker-popup,
+.date-time-picker-popup,
+.date-picker-dropdown,
+.time-picker-dropdown,
+.date-time-picker-dropdown {
+  background-color: #374151 !important;
+  background: #374151 !important;
+  color: #ffffff !important;
+  border-color: #4b5563 !important;
+}
+
+.calendar-day,
+.date-picker-day,
+.calendar-date,
+.date-picker-date,
+.calendar-time,
+.date-picker-time {
+  color: #ffffff !important;
+}
+
+.calendar-day.selected,
+.date-picker-day.selected,
+.calendar-date.selected,
+.date-picker-date.selected,
+.calendar-time.selected,
+.date-picker-time.selected {
+  background-color: #d4b98c !important;
+  background: #d4b98c !important;
+  color: #ffffff !important;
+}
+
+/* Progress bar */
+.progress-bar {
+  background-color: #4b5563 !important;
+}
+
+.progress-bar-fill {
+  background-color: #d4b98c !important;
+}
+
+/* File upload */
+.file-upload {
+  border-color: #4b5563 !important;
+  background-color: #374151 !important;
+}
+
+.file-upload-text {
+  color: #9ca3af !important;
+}
+
+/* Target specific input containers but keep labels transparent */
+div input,
+div select,
+div textarea {
+  background-color: transparent !important; /* Changed from #374151 to transparent */
+  background: transparent !important; /* Changed from #374151 to transparent */
+  color: #ffffff !important;
+}
+
+/* Make sure label containers stay transparent */
+div label,
+label div,
+.label-container,
+.label-wrapper,
+.form-label-container,
+.form-label-wrapper,
+.field-label-container,
+.field-label-wrapper,
+.input-label-container,
+.input-label-wrapper,
+.parameter-label-container,
+.parameter-label-wrapper,
+.title-container,
+.title-wrapper,
+.form-title-container,
+.form-title-wrapper,
+.field-title-container,
+.field-title-wrapper,
+.input-title-container,
+.input-title-wrapper,
+.parameter-title-container,
+.parameter-title-wrapper,
+.name-container,
+.name-wrapper,
+.form-name-container,
+.form-name-wrapper,
+.field-name-container,
+.field-name-wrapper,
+.input-name-container,
+.input-name-wrapper,
+.parameter-name-container,
+.parameter-name-wrapper {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Target by ID pattern - only for inputs */
+[id*="input"],
+[id*="field"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]),
+[id*="text"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]),
+[id*="email"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]),
+[id*="tel"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]),
+[id*="date"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]),
+[id*="time"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]),
+[id*="select"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]),
+[id*="dropdown"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]),
+[id*="textarea"]:not(label):not([id*="required"]):not([id*="asterisk"]):not([id*="star"]) {
+  background-color: transparent !important; /* Changed from #374151 to transparent */
+  background: transparent !important; /* Changed from #374151 to transparent */
+  color: #ffffff !important;
+}
+
+/* Target by class pattern - only for inputs */
+[class*="input"]:not(label):not(.label-container):not(.label-wrapper):not([class*="required"]):not(
+    [class*="asterisk"]
+  ):not([class*="star"]):not([class*="section"]):not([class*="header"]):not([class*="title"]),
+[class*="field"]:not(label):not(.label-container):not(.label-wrapper):not([class*="required"]):not(
+    [class*="asterisk"]
+  ):not([class*="star"]):not([class*="section"]):not([class*="header"]):not([class*="title"]),
+[class*="text-input"],
+[class*="email-input"],
+[class*="tel-input"],
+[class*="date-input"],
+[class*="time-input"],
+[class*="select-input"],
+[class*="dropdown-input"],
+[class*="textarea-input"] {
+  background-color: transparent !important; /* Changed from #374151 to transparent */
+  background: transparent !important; /* Changed from #374151 to transparent */
+  color: #ffffff !important;
+}
+
+/* Ensure form section titles and descriptions have transparent backgrounds */
+.form-section-title,
+.form-section-description,
+.section-title,
+.section-description,
+.section-header,
+.section-footer,
+.form-section-header,
+.form-section-footer,
+div.section-title,
+div.section-header,
+div.form-section-title,
+div.form-section-header,
+h1.section-title,
+h2.section-title,
+h3.section-title,
+h4.section-title,
+h1.section-header,
+h2.section-header,
+h3.section-header,
+h4.section-header,
+h1.form-section-title,
+h2.form-section-title,
+h3.form-section-title,
+h4.form-section-title,
+h1.form-section-header,
+h2.form-section-header,
+h3.form-section-header,
+h4.form-section-header,
+.form-section > div,
+.form-section > h1,
+.form-section > h2,
+.form-section > h3,
+.form-section > h4,
+.form-section > div > h1,
+.form-section > div > h2,
+.form-section > div > h3,
+.form-section > div > h4,
+.form-section > div > div > h1,
+.form-section > div > div > h2,
+.form-section > div > div > h3,
+.form-section > div > div > h4 {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Ensure all spans have transparent backgrounds (often used for required stars) */
+span,
+span.required,
+span.required-field,
+span.required-indicator,
+span.asterisk,
+span.star,
+span[class*="required"],
+span[class*="asterisk"],
+span[class*="star"],
+label span,
+.label span,
+.form-label span,
+.field-label span,
+.input-label span,
+.parameter-label span,
+.title span,
+.form-title span,
+.field-title span,
+.input-title span,
+.parameter-title span,
+.name span,
+.form-name span,
+.field-name span,
+.input-name span,
+.parameter-name span,
+.text span,
+.form-text span,
+.field-text span,
+.input-text span,
+.parameter-text span,
+.description span,
+.form-description span,
+.field-description span,
+.input-description span,
+.parameter-description span,
+.help-text span,
+.form-help-text span,
+.field-help-text span,
+.input-help-text span,
+.parameter-help-text span {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Ensure all section headers and their containers have transparent backgrounds */
+[class*="contact-information"],
+[class*="contact_information"],
+[class*="contactinformation"],
+[class*="event-details"],
+[class*="event_details"],
+[class*="eventdetails"],
+[id*="contact-information"],
+[id*="contact_information"],
+[id*="contactinformation"],
+[id*="event-details"],
+[id*="event_details"],
+[id*="eventdetails"],
+div[class*="contact-information"],
+div[class*="contact_information"],
+div[class*="contactinformation"],
+div[class*="event-details"],
+div[class*="event_details"],
+div[class*="eventdetails"],
+div[id*="contact-information"],
+div[id*="contact_information"],
+div[id*="contactinformation"],
+div[id*="event-details"],
+div[id*="event_details"],
+div[id*="eventdetails"],
+h1[class*="contact-information"],
+h1[class*="contact_information"],
+h1[class*="contactinformation"],
+h1[class*="event-details"],
+h1[class*="event_details"],
+h1[class*="eventdetails"],
+h2[class*="contact-information"],
+h2[class*="contact_information"],
+h2[class*="contactinformation"],
+h2[class*="event-details"],
+h2[class*="event_details"],
+h2[class*="eventdetails"],
+h3[class*="contact-information"],
+h3[class*="contact_information"],
+h3[class*="contactinformation"],
+h3[class*="event-details"],
+h3[class*="event_details"],
+h3[class*="eventdetails"],
+h4[class*="contact-information"],
+h4[class*="contact_information"],
+h4[class*="contactinformation"],
+h4[class*="event-details"],
+h4[class*="event_details"],
+h4[class*="eventdetails"] {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Force all headings to have transparent backgrounds */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div > h1,
+div > h2,
+div > h3,
+div > h4,
+div > h5,
+div > h6,
+.form-section h1,
+.form-section h2,
+.form-section h3,
+.form-section h4,
+.form-section h5,
+.form-section h6,
+.form-section > div > h1,
+.form-section > div > h2,
+.form-section > div > h3,
+.form-section > div > h4,
+.form-section > div > h5,
+.form-section > div > h6,
+.form-section > div > div > h1,
+.form-section > div > div > h2,
+.form-section > div > div > h3,
+.form-section > div > div > h4,
+.form-section > div > div > h5,
+.form-section > div > div > h6 {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Force all containers of headings to have transparent backgrounds */
+div > h1,
+div > h2,
+div > h3,
+div > h4,
+div > h5,
+div > h6,
+div:has(> h1),
+div:has(> h2),
+div:has(> h3),
+div:has(> h4),
+div:has(> h5),
+div:has(> h6),
+div:has(> div > h1),
+div:has(> div > h2),
+div:has(> div > h3),
+div:has(> div > h4),
+div:has(> div > h5),
+div:has(> div > h6) {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
