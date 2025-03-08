@@ -7,6 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: "https://gracefulharpist.com/sitemap.xml",
+    host: "https://gracefulharpist.com",
   }
 }
 

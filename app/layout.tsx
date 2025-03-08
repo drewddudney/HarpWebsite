@@ -11,8 +11,8 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
-  fallback: ["serif"], // Add fallback
-  preload: true, // Ensure preloading
+  fallback: ["serif"],
+  preload: true,
 })
 
 const lato = Lato({
@@ -20,9 +20,13 @@ const lato = Lato({
   variable: "--font-lato",
   display: "swap",
   weight: ["300", "400", "700", "900"],
-  fallback: ["sans-serif"], // Add fallback
-  preload: true, // Ensure preloading
+  fallback: ["sans-serif"],
+  preload: true,
 })
+
+// Define the header image URL for consistent use across metadata
+const headerImageUrl =
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8212.JPG-5nKD2cZUFf1SFkelH8Hr4H8q96o7CR.jpeg"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gracefulharpist.com"),
@@ -45,6 +49,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Grace Dudney" }],
   creator: "Grace Dudney",
   publisher: "Graceful Harpist",
+
+  // Enhanced OpenGraph metadata for better social sharing
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -55,24 +61,61 @@ export const metadata: Metadata = {
       "Professional harpist in Austin, Texas providing elegant harp music for weddings, corporate events, and special occasions.",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8212.JPG-5nKD2cZUFf1SFkelH8Hr4H8q96o7CR.jpeg",
+        url: headerImageUrl,
         width: 1200,
         height: 630,
         alt: "Graceful Harpist - Professional Harp Music in Austin, Texas",
       },
     ],
   },
+
+  // Twitter card metadata
   twitter: {
     card: "summary_large_image",
     title: "Graceful Harpist | Professional Harp Music for Weddings and Events",
     description:
       "Professional harpist in Austin, Texas providing elegant harp music for weddings, corporate events, and special occasions.",
-    images: [
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8212.JPG-5nKD2cZUFf1SFkelH8Hr4H8q96o7CR.jpeg",
-    ],
+    images: [headerImageUrl],
+    creator: "@gracefulharpist",
   },
+
+  // Canonical URL
   alternates: {
     canonical: "https://gracefulharpist.com",
+  },
+
+  // Icons for favicon and various platforms
+  icons: {
+    icon: [
+      { url: headerImageUrl, sizes: "32x32" },
+      { url: headerImageUrl, sizes: "16x16" },
+    ],
+    shortcut: headerImageUrl,
+    apple: [{ url: headerImageUrl, sizes: "180x180", type: "image/jpeg" }],
+    other: [
+      {
+        rel: "apple-touch-icon",
+        url: headerImageUrl,
+      },
+    ],
+  },
+
+  // Apple-specific metadata
+  appleWebApp: {
+    title: "Graceful Harpist",
+    statusBarStyle: "black-translucent",
+    capable: true,
+  },
+
+  // Application name for browsers
+  applicationName: "Graceful Harpist",
+
+  // For iOS messages
+  other: {
+    "apple-mobile-web-app-title": "Graceful Harpist",
+    "og:site_name": "Graceful Harpist",
+    "apple-mobile-web-app-capable": "yes",
+    "format-detection": "telephone=no",
   },
     generator: 'v0.dev'
 }
@@ -84,6 +127,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${lato.variable}`}>
+      <head>
+        {/* Additional meta tags for iOS messages and other platforms */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Graceful Harpist" />
+        <meta property="og:site_name" content="Graceful Harpist" />
+        <link rel="mask-icon" href={headerImageUrl} color="#d4b98c" />
+        <meta name="theme-color" content="#d4b98c" />
+      </head>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Layout>{children}</Layout>
