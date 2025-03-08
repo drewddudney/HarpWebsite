@@ -5,11 +5,14 @@ import "./globals.css"
 import { Layout } from "@/components/layout"
 import { ThemeProvider } from "@/components/theme-provider"
 
+// Update font loading with proper caching and fallback strategy
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
+  fallback: ["serif"], // Add fallback
+  preload: true, // Ensure preloading
 })
 
 const lato = Lato({
@@ -17,6 +20,8 @@ const lato = Lato({
   variable: "--font-lato",
   display: "swap",
   weight: ["300", "400", "700", "900"],
+  fallback: ["sans-serif"], // Add fallback
+  preload: true, // Ensure preloading
 })
 
 export const metadata: Metadata = {
